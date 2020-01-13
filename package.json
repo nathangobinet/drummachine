@@ -1,7 +1,7 @@
 {
-  "name": "project_name",
+  "name": "drummachine",
   "version": "1.0.0",
-  "description": "Project descrpition",
+  "description": "FCC: Drum Machine",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "Nathan Gobinet",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

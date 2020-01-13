@@ -1,3 +1,3 @@
-# React, Redux, Sass Boilerplate
-This boilerplate is for my personal use.
+# FCC: Drum Machine
+A drum machine for the Free Code Camp certification.
 
