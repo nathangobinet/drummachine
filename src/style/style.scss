@@ -14,7 +14,7 @@ h1 {
 
 .pad-container {
   padding: 10px!important;
-  height: calc(5vw + 10vh);
+  height: 15vh;
 }
 
 .drum-pad {
@@ -22,18 +22,52 @@ h1 {
   width: 100%;
   display: block;
   font-size: 25px;
-  background: rgba($color: #000000, $alpha: .1);
   color: white;
   box-shadow: 0 0 4px #999;
-  
-  background-position: center;
-  transition: background 0.4s;
+  transition: background 0.2s;
   outline: none!important;
 }
 
-.active {
-  background-color: rgb(0, 136, 221);
-  background-size: 100%;
-  transition: background .2s ease-in-out ;
+.note {
+  background: rgba($color: #41d1f5, $alpha: .2);
 }
 
+.kick {
+  background: rgba($color: #af288d, $alpha: .2);
+}
+
+.active.kick {
+  background: rgba($color: #af288d, $alpha: .5);
+}
+
+.active.note {
+  background: rgba($color: #41d1f5, $alpha: .5);
+}
+
+.menu-container {
+  padding: 10px;
+  height: 100%;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 4px #999;
+  background-color: rgba($color: #000000, $alpha: .2);
+  border: 1px solid rgb(216, 216, 216);
+}
+
+#display {
+  width: 60%;
+  font-size: 20px;
+  border-radius: 10px;
+  background: rgba($color: #000, $alpha: .2);
+  padding: 4px;
+}
+
+.volume {
+  width: 85%;
+  border-radius: 10px;
+  background: rgba($color: #000, $alpha: .2);
+  padding: 8px 10px 2px 10px;
+}

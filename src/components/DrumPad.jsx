@@ -65,10 +65,12 @@ class DrumPad extends React.Component {
   }
 
   render() {
-    const { letter, src, loop } = this.props;
+    const {
+      letter, src, loop, type,
+    } = this.props;
     return (
       <div className="col-4 pad-container">
-        <button onClick={(evt) => this.playSound(evt.currentTarget.lastChild)} type="button" className="drum-pad">
+        <button onClick={(evt) => this.playSound(evt.currentTarget.lastChild)} type="button" className={`drum-pad ${type}`}>
           <span>{letter}</span>
           <audio id={letter} loop={loop} className="clip" src={src}>
             <track kind="captions" label="No caption available" />
@@ -84,6 +86,7 @@ DrumPad.propTypes = {
   letter: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   volume: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 DrumPad.defaultProps = {
