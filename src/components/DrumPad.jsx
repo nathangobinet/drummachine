@@ -72,7 +72,7 @@ class DrumPad extends React.Component {
       <div className="col-4 pad-container">
         <button
           id={description}
-          onMouseDown={(evt) => this.playSound(evt.currentTarget.lastChild)}
+          onPointerDown={(evt) => this.playSound(evt.currentTarget.lastChild)}
           type="button"
           className={`drum-pad ${type}`}
         >
