@@ -89,7 +89,7 @@ class DrumPad extends React.Component {
           className={`drum-pad ${type}`}
         >
           <span>{letter}</span>
-          <audio id={letter} loop={loop} className="clip" src={src}>
+          <audio preload="auto" id={letter} loop={loop} className="clip" src={src}>
             <track kind="captions" label="No caption available" />
           </audio>
         </button>
