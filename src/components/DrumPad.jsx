@@ -70,7 +70,7 @@ class DrumPad extends React.Component {
     } = this.props;
     return (
       <div className="col-4 pad-container">
-        <button onTouchStart={(evt) => this.playSound(evt.currentTarget.lastChild)} onClick={(evt) => this.playSound(evt.currentTarget.lastChild)} type="button" className={`drum-pad ${type}`}>
+        <button onTouchEnd={(evt) => this.playSound(evt.currentTarget.lastChild)} onMouseUp={(evt) => this.playSound(evt.currentTarget.lastChild)} type="button" className={`drum-pad ${type}`}>
           <span>{letter}</span>
           <audio id={letter} loop={loop} className="clip" src={src}>
             <track kind="captions" label="No caption available" />
