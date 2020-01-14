@@ -16,23 +16,23 @@ const App = () => (
   <div id="drum-machine" className="container">
     <div className="row">
       <div className="col-12">
-        <h1>Drum Machine 1.1</h1>
+        <h1>Drum Machine 1.2</h1>
       </div>
       <div className="col-md-8">
         <div className="row no-gutters">
-          <DrumPadContainer type="note" letter="Q" src="ressources/sounds/C.wav" />
-          <DrumPadContainer type="note" letter="W" src="ressources/sounds/D.wav" />
-          <DrumPadContainer type="note" letter="E" src="ressources/sounds/G.wav" />
+          <DrumPadContainer description="Do #3" type="note" letter="Q" src="ressources/sounds/C.wav" />
+          <DrumPadContainer description="Re #3" type="note" letter="W" src="ressources/sounds/D.wav" />
+          <DrumPadContainer description="Sol #3" type="note" letter="E" src="ressources/sounds/G.wav" />
         </div>
         <div className="row no-gutters">
-          <DrumPadContainer loop type="loop" letter="A" src="ressources/sounds/MeloLoop.wav" />
-          <DrumPadContainer type="kick" letter="S" src="ressources/sounds/Kick.wav" />
-          <DrumPadContainer type="note" letter="D" src="ressources/sounds/R.wav" />
+          <DrumPadContainer description="Melody Loop" loop type="loop" letter="A" src="ressources/sounds/MeloLoop.wav" />
+          <DrumPadContainer description="Kick" type="kick" letter="S" src="ressources/sounds/Kick.wav" />
+          <DrumPadContainer description="Do #2" type="note" letter="D" src="ressources/sounds/R.wav" />
         </div>
         <div className="row no-gutters">
-          <DrumPadContainer loop type="loop" letter="Z" src="ressources/sounds/DumbLoop.wav" />
-          <DrumPadContainer type="kick" letter="X" src="ressources/sounds/Clap.wav" />
-          <DrumPadContainer type="kick" letter="C" src="ressources/sounds/Snare.wav" />
+          <DrumPadContainer description="Drump loop" loop type="loop" letter="Z" src="ressources/sounds/DumbLoop.wav" />
+          <DrumPadContainer description="Clap" type="kick" letter="X" src="ressources/sounds/Clap.wav" />
+          <DrumPadContainer description="Snare" type="kick" letter="C" src="ressources/sounds/Snare.wav" />
         </div>
       </div>
       <div className="col-md-4">
