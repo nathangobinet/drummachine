@@ -25,14 +25,14 @@ const App = () => (
           <DrumPadContainer type="note" letter="E" src="ressources/sounds/G.wav" />
         </div>
         <div className="row no-gutters">
-          <DrumPadContainer type="kick" letter="A" src="ressources/sounds/Kick.wav" />
-          <DrumPadContainer type="kick" letter="S" src="ressources/sounds/Bass.wav" />
-          <DrumPadContainer type="note" letter="D" src="ressources/sounds/A.wav" />
+          <DrumPadContainer loop type="loop" letter="A" src="ressources/sounds/MeloLoop.wav" />
+          <DrumPadContainer type="kick" letter="S" src="ressources/sounds/Kick.wav" />
+          <DrumPadContainer type="note" letter="D" src="ressources/sounds/R.wav" />
         </div>
         <div className="row no-gutters">
-          <DrumPadContainer type="kick" letter="Z" src="ressources/sounds/Snare.wav" />
+          <DrumPadContainer loop type="loop" letter="Z" src="ressources/sounds/DumbLoop.wav" />
           <DrumPadContainer type="kick" letter="X" src="ressources/sounds/Clap.wav" />
-          <DrumPadContainer type="note" letter="C" src="ressources/sounds/R.wav" />
+          <DrumPadContainer type="kick" letter="C" src="ressources/sounds/Snare.wav" />
         </div>
       </div>
       <div className="col-md-4">

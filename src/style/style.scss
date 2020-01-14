@@ -37,12 +37,20 @@ h1 {
   background: rgba($color: #af288d, $alpha: .2);
 }
 
+.loop {
+  background: rgba($color: #47da34, $alpha: .2);
+}
+
 .active.kick {
   background: rgba($color: #af288d, $alpha: .5);
 }
 
 .active.note {
   background: rgba($color: #41d1f5, $alpha: .5);
+}
+
+.loop.active {
+  background: rgba($color: #47da34, $alpha: .5);
 }
 
 .menu-container {
