@@ -40,7 +40,7 @@ const App = () => (
   <div id="drum-machine" className="container">
     <div className="row">
       <div className="col-12">
-        <h1>Drum Machine 1.4</h1>
+        <h1>Drum Machine</h1>
       </div>
       <div className="col-md-8">
         <div className="row no-gutters">
