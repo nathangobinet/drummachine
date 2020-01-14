@@ -3,13 +3,8 @@ const EDITDESCRIPTION = 'EDITDESCRIPTION';
 
 function getDefaultOption() {
   return {
-    volume: 1,
-  };
-}
-
-function editVolume(volume) {
-  return {
-    volume,
+    volume: 0.5,
+    description: 'Waiting...',
   };
 }
 
@@ -20,12 +15,6 @@ function editVolumeAction(volume) {
   };
 }
 
-function editDescription(description) {
-  return {
-    description,
-  };
-}
-
 function editDescriptionAction(description) {
   return {
     type: EDITDESCRIPTION,
@@ -33,12 +22,18 @@ function editDescriptionAction(description) {
   };
 }
 
-const rootReducer = (options = getDefaultOption, action) => {
+const rootReducer = (options = getDefaultOption(), action) => {
   switch (action.type) {
     case EDITVOLULME:
-      return editVolume(action.volume);
-    case EDITDESCRIPTION: 
-      return editDescription(action.description);
+      return {
+        description: options.description,
+        volume: parseInt(action.volume, 10) / 100,
+      };
+    case EDITDESCRIPTION:
+      return {
+        description: action.description,
+        volume: options.volume,
+      };
     default:
       return options;
   }

@@ -1,16 +1,40 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { connect } from 'react-redux';
+import { editDescriptionAction, editVolumeAction } from '../redux/reducers';
 import DrumPad from './DrumPad';
+import Menu from './Menu';
 
 // TODO: Import components then connect them to props
 
-const mapStateToProps = (options) => ({
+const DrumPadMapStateToProps = (options) => ({
   volume: options.volume,
 });
 
+const MenuMapStateToProps = (options) => ({
+  description: options.description,
+  volume: options.volume,
+});
 
-const DrumPadContainer = connect(mapStateToProps, null)(DrumPad);
+const MenuMapDispatchToProps = (dispatch) => ({
+  editVolume: (description) => {
+    dispatch(editVolumeAction(description));
+  },
+});
+const DrumPadMapDispatchToProps = (dispatch) => ({
+  editDescritpion: (description) => {
+    dispatch(editDescriptionAction(description));
+  },
+});
+
+const DrumPadContainer = connect(
+  DrumPadMapStateToProps,
+  DrumPadMapDispatchToProps,
+)(DrumPad);
+
+const MenuContainer = connect(
+  MenuMapStateToProps,
+  MenuMapDispatchToProps,
+)(Menu);
 
 const App = () => (
   <div id="drum-machine" className="container">
@@ -36,25 +60,7 @@ const App = () => (
         </div>
       </div>
       <div className="col-md-4">
-        <div className="menu-container">
-          <div className="menu">
-            <div className="row">
-              <div className="col-12 p-2 p-md-4 text-center">
-                <div id="display" className="m-auto">
-                  Bass
-                </div>
-              </div>
-              <div className="col-12 p-2 p-md-4">
-                <div className="volume m-auto">
-                  <label className="mb-0" htmlFor="formControlRange">
-                    Volume
-                  </label>
-                  <input type="range" className="custom-range" id="formControlRange" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <MenuContainer />
       </div>
     </div>
   </div>
