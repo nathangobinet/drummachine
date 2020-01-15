@@ -37,9 +37,7 @@ class DrumPad extends React.Component {
   }
 
   handlePointer(evt) {
-    const { editDescritpion, description } = this.props;
-    editDescritpion(description);
-    this.playSound(evt.currentTarget.lastChild);
+    this.handleAction(evt.currentTarget.lastChild);
   }
 
   soundEnded() {
@@ -57,9 +55,15 @@ class DrumPad extends React.Component {
 
   handleKey(evt) {
     const { letter } = this.props;
-    if (evt.key === letter.toLowerCase()) {
-      this.playSound(document.getElementById(letter));
+    if (evt.key === letter.toLowerCase() || evt.key === letter.toUpperCase()) {
+      this.handleAction(document.getElementById(letter));
     }
+  }
+
+  handleAction(target) {
+    const { description, editDescritpion } = this.props;
+    editDescritpion(description);
+    this.playSound(target);
   }
 
   playSound(audio) {
